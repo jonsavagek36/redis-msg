@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+.app-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-view {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.channel-select {
+  position: relative;
+}
+
+.channel-display {
+  position: relative;
+}
+
+.new-message {
+  position: relative;
+}
+
+.message-form {
+  position: relative;
+}

@@ -1,20 +1,12 @@
 class MessagesController < ApplicationController
 
   def index
-  end
-
-  def new
-    @message = Message.new
+    @messages = Message.receive
   end
 
   def create
-    @message = Message.new(message_params)
-  end
-
-  private
-
-  def message_params
-    params.require(:message).permit(:content, :channel)
+    Message.send(params[:content])
+    redirect_to messages_path
   end
 
 end
